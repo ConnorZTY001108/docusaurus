@@ -32,7 +32,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/ConnorZTY001108/docusaurus/tree/main/',
-          breadcrumbs: false,
+          breadcrumbs: true,
         },
         blog: false,
         theme: {
@@ -57,8 +57,7 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/docs',
           position: 'left',
           label: 'Documentation',
         },
