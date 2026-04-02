@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Docusaurus',
-  tagline: 'Documentation site',
+  title: 'Chemware Docs',
+  tagline: 'Capstone documentation for industrial plant modeling and simulation workflows.',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -33,17 +33,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/ConnorZTY001108/docusaurus/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/ConnorZTY001108/docusaurus/tree/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -52,24 +42,40 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/showcase/dashboard.png',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Docusaurus',
+      title: 'Chemware Docs',
       logo: {
-        alt: 'Docusaurus Logo',
+        alt: 'Chemware Docs logo',
         src: 'img/logo.svg',
       },
       items: [
         {
+          to: '/',
+          label: 'Home',
+          position: 'left',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          to: '/docs/capstone/Design',
+          label: 'Design',
+          position: 'left',
+        },
+        {
+          to: '/docs/capstone/SRS',
+          label: 'SRS',
+          position: 'left',
+        },
         {
           href: 'https://github.com/ConnorZTY001108/docusaurus',
           label: 'GitHub',
@@ -81,46 +87,46 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Project',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Documentation hub',
               to: '/docs/intro',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Capstone archive',
+              to: '/docs/capstone',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Key sections',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Code explanation',
+              to: '/docs/capstone/CodeExplanation',
             },
             {
-              label: 'GitHub',
+              label: 'User guide',
+              to: '/docs/capstone/UserGuide',
+            },
+            {
+              label: 'Presentations',
+              to: '/docs/capstone/Presentations',
+            },
+          ],
+        },
+        {
+          title: 'Repository',
+          items: [
+            {
+              label: 'GitHub repository',
               href: 'https://github.com/ConnorZTY001108/docusaurus',
             },
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} ConnorZTY001108. Built with Docusaurus.`,
+      copyright: `Copyright ${new Date().getFullYear()} ConnorZTY001108. Rebuilt with Docusaurus for the Chemware Engineering capstone archive.`,
     },
     prism: {
       theme: prismThemes.github,
