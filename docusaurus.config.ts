@@ -56,77 +56,12 @@ const config: Config = {
       },
       items: [
         {
-          to: '/',
-          label: 'Home',
-          position: 'left',
-        },
-        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
         },
-        {
-          to: '/docs/capstone/Design',
-          label: 'Design',
-          position: 'left',
-        },
-        {
-          to: '/docs/capstone/SRS',
-          label: 'SRS',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/ConnorZTY001108/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Project',
-          items: [
-            {
-              label: 'Documentation hub',
-              to: '/docs/intro',
-            },
-            {
-              label: 'Capstone archive',
-              to: '/docs/capstone',
-            },
-          ],
-        },
-        {
-          title: 'Key sections',
-          items: [
-            {
-              label: 'Code explanation',
-              to: '/docs/capstone/CodeExplanation',
-            },
-            {
-              label: 'User guide',
-              to: '/docs/capstone/UserGuide',
-            },
-            {
-              label: 'Presentations',
-              to: '/docs/capstone/Presentations',
-            },
-          ],
-        },
-        {
-          title: 'Repository',
-          items: [
-            {
-              label: 'GitHub repository',
-              href: 'https://github.com/ConnorZTY001108/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright ${new Date().getFullYear()} ConnorZTY001108. Rebuilt with Docusaurus for the Chemware Engineering capstone archive.`,
     },
     prism: {
       theme: prismThemes.github,
