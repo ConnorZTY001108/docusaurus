@@ -32,6 +32,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/ConnorZTY001108/docusaurus/tree/main/',
+          breadcrumbs: false,
         },
         blog: false,
         theme: {
