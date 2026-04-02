@@ -57,7 +57,8 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs',
+          type: 'doc',
+          docId: 'intro',
           position: 'left',
           label: 'Documentation',
         },
